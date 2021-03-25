@@ -1,0 +1,10 @@
+{
+  "version": "independent",
+  "packages": ["packages/*"],
+  "command": {
+    "publish": {
+      "ignoreChanges": ["package-lock.json"],
+      "allowBranch": "main"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IOS BpkCarouselItem should render correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "width": 4,
+      },
+    ]
+  }
+>
+  <Text
+    allowFontScaling={false}
+    style={
+      Array [
+        Object {
+          "color": "rgb(17, 18, 54)",
+          "fontFamily": "System",
+          "fontSize": 16,
+          "fontWeight": "400",
+          "letterSpacing": 0.12,
+          "textAlign": "left",
+        },
+        Object {},
+      ]
+    }
+  >
+    View 1
+  </Text>
+</View>
+`;

@@ -1,0 +1,24 @@
+rootProject.name = 'native'
+
+//This is supposed to do the auto linking, but it's not working correctly
+//apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
+
+include ':app'
+
+include ':backpack-react-native'
+project(':backpack-react-native').projectDir = new File(rootProject.projectDir, '../lib/android')
+project(':backpack-react-native').setBuildFileName('./build.internal.gradle')
+
+// react-native-linear-gradient
+include ':react-native-linear-gradient'
+project(':react-native-linear-gradient').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-linear-gradient/android')
+
+// react-native-appearance
+include ':react-native-dark-mode'
+project(':react-native-dark-mode').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-dark-mode/android')
+
+include ':react-native-maps:lib'
+project(':react-native-maps').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-maps/lib/android')
+
+
+

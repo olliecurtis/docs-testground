@@ -1,0 +1,166 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Android BpkHorizontalNav dark mode should render correctly 1`] = `
+<RCTScrollView
+  alwaysBounceHorizontal={false}
+  contentContainerStyle={
+    Array [
+      Object {
+        "borderBottomColor": "rgb(72, 72, 74)",
+        "borderBottomWidth": 1,
+        "borderColor": "transparent",
+        "flexDirection": "column",
+      },
+    ]
+  }
+  horizontal={true}
+  showsHorizontalScrollIndicator={false}
+>
+  <View>
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+          },
+        ]
+      }
+    />
+  </View>
+</RCTScrollView>
+`;
+
+exports[`Android BpkHorizontalNav light mode should render correctly 1`] = `
+<RCTScrollView
+  alwaysBounceHorizontal={false}
+  contentContainerStyle={
+    Array [
+      Object {
+        "borderBottomColor": "rgb(205, 205, 215)",
+        "borderBottomWidth": 1,
+        "borderColor": "transparent",
+        "flexDirection": "column",
+      },
+    ]
+  }
+  horizontal={true}
+  showsHorizontalScrollIndicator={false}
+>
+  <View>
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+          },
+        ]
+      }
+    />
+  </View>
+</RCTScrollView>
+`;
+
+exports[`Android BpkHorizontalNav should render correctly with arbitrary props 1`] = `
+<RCTScrollView
+  alwaysBounceHorizontal={false}
+  contentContainerStyle={
+    Array [
+      Object {
+        "borderBottomColor": "rgb(205, 205, 215)",
+        "borderBottomWidth": 1,
+        "borderColor": "transparent",
+        "flexDirection": "column",
+      },
+    ]
+  }
+  custom="custom-prop"
+  horizontal={true}
+  showsHorizontalScrollIndicator={false}
+>
+  <View>
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+          },
+        ]
+      }
+    />
+  </View>
+</RCTScrollView>
+`;
+
+exports[`Android BpkHorizontalNav should render correctly with custom "style" prop 1`] = `
+<RCTScrollView
+  alwaysBounceHorizontal={false}
+  contentContainerStyle={
+    Array [
+      Object {
+        "borderBottomColor": "rgb(205, 205, 215)",
+        "borderBottomWidth": 1,
+        "borderColor": "transparent",
+        "flexDirection": "column",
+      },
+      Object {
+        "marginBottom": 4,
+      },
+    ]
+  }
+  horizontal={true}
+  showsHorizontalScrollIndicator={false}
+>
+  <View>
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+          },
+        ]
+      }
+    />
+  </View>
+</RCTScrollView>
+`;
+
+exports[`Android BpkHorizontalNav should render correctly with the "selected" prop 1`] = `
+<RCTScrollView
+  alwaysBounceHorizontal={false}
+  contentContainerStyle={
+    Array [
+      Object {
+        "borderBottomColor": "rgb(205, 205, 215)",
+        "borderBottomWidth": 1,
+        "borderColor": "transparent",
+        "flexDirection": "column",
+      },
+    ]
+  }
+  horizontal={true}
+  showsHorizontalScrollIndicator={false}
+>
+  <View>
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+          },
+        ]
+      }
+    >
+      <Text
+        testID="0"
+      >
+        Selected
+      </Text>
+      <Text
+        testID="1"
+      >
+        Not selected
+      </Text>
+    </View>
+  </View>
+</RCTScrollView>
+`;

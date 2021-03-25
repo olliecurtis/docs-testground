@@ -1,0 +1,81 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "skyscanner",
+    "plugin:flowtype/recommended"
+  ],
+  "plugins": [
+    "flowtype"
+  ],
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "settings": {
+    "import/resolver": {
+     "alias" : {
+        "map": [
+          ["helpers",  "./docs/src/helpers" ],
+          ["components", "./docs/src/components"],
+          ["static",  "docs/src/static" ],
+          ["backpack-ios",  "./backpack-ios" ],
+          ["backpack-android", "./backpack-android" ],
+          ["backpack-react-native",  "./backpack-react-native" ]
+        ]
+      },
+      "node": {
+        "extensions": [
+          ".js",
+          ".json",
+          ".android.js",
+          ".ios.js"
+        ]
+      }
+    }
+  },
+  "ignorePatterns": ["**/generated/**/*.js", "scripts/build-process/templates/**/*.js"],
+  "rules": {
+    "prettier/prettier": "error",
+    "react/jsx-filename-extension": "off",
+    "import/no-extraneous-dependencies": "off",
+    // This is superceded by jsx-a11y/label-has-associated-control
+    "jsx-a11y/label-has-for": "off",
+    // We want to keep prop-types alongside flow types so we relax this rule to allow us to specify defaults for
+    // required flow props
+    "react/default-props-match-prop-types": [
+      "error",
+      {
+        "allowRequiredDefaults": true
+      }
+    ],
+    "react/require-default-props": [
+      "error",
+      {
+        "forbidDefaultForRequired": false
+      }
+    ],
+    "react/prefer-stateless-function": [
+      "error",
+      {
+        "ignorePureComponents": true
+      }
+    ],
+    "react/sort-comp": [
+      "error",
+      {
+        "order": [
+          "type-annotations",
+          "static-methods",
+          "lifecycle",
+          "/^on.+$/",
+          "getters",
+          "setters",
+          "/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/",
+          "everything-else",
+          "/^render.+$/",
+          "render"
+        ]
+      }
+    ]
+  }
+}

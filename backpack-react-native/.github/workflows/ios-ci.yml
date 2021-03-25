@@ -1,0 +1,42 @@
+name: iOS CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: macos-10.15
+
+    steps:
+      # Checkout the repo
+      - uses: actions/checkout@v2
+
+      - name: select Xcode version
+        run: sudo xcode-select -switch /Applications/Xcode_11.7.app
+
+      - name: brew install
+        run: brew install clang-format
+
+      - name: npm install
+        shell: bash -l {0}
+        run: |
+          nvm use
+          npm ci
+
+      - name: install bundler
+        run: gem install bundler --version 2.0.2
+
+      - name: bundler install
+        run: bundle install
+        working-directory: ./ios
+
+      - name: CocoaPod install
+        run: bundle exec pod install
+        working-directory: ./ios
+
+      - name: CI
+        run: bundle exec rake ci
+        working-directory: ./ios

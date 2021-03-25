@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <color name="__buttonDisabledBackground">@color/bpkSkyGrayTint06</color>
+  <color name="__buttonDisabledText">@color/bpkSkyGrayTint04</color>
+  <color name="__buttonSecondaryBackground">@color/bpkWhite</color>
+  <color name="__buttonSecondaryBorder">@color/bpkSkyGrayTint06</color>
+  <color name="__calendarSameDayBackground">@color/bpkSkyBlueTint02</color>
+  <color name="__calendarRangeBackground">@color/bpkSkyBlueTint02</color>
+  <color name="__calendarRangeText">@color/bpkTextPrimaryLight</color>
+  <color name="__calendarDisabledColour">@color/bpkSkyGrayTint06</color>
+  <color name="__calendarSelectedTextColor">@color/bpkWhite</color>
+  <color name="__calendarHighlightedDayDot">@color/bpkSkyGrayTint05</color>
+  <color name="__calendarCellStylePositiveColor">@color/bpkMonteverde</color>
+  <color name="__calendarCellStyleNeutralColor">@color/bpkKolkata</color>
+  <color name="__calendarCellStyleNegativeColor">@color/bpkPanjin</color>
+  <color name="__dialogBackground">@color/bpkWhite</color>
+  <color name="__panelBorder">@color/bpkSkyGrayTint06</color>
+  <color name="__switchTrackDisabled">@color/bpkSkyGrayTint06</color>
+  <color name="__switchThumbDisabled">@color/bpkSkyGrayTint07</color>
+  <color name="__starRatingStarColor">@color/bpkSkyGrayTint04</color>
+  <color name="__rating_medium_color">@color/bpkKolkata</color>
+  <color name="__horizontalNavTextDefault">@color/bpkSkyGrayTint01</color>
+  <color name="__textFieldTextDisabled">@color/bpkSkyGrayTint04</color>
+  <color name="__textFieldHint">@color/bpkTextSecondaryLight</color>
+  <color name="__textFieldIcon">@color/bpkSkyGrayTint02</color>
+  <color name="__textFieldBorder">@color/bpkSkyGrayTint04</color>
+  <color name="__textFieldBorderDisabled">@color/bpkSkyGrayTint06</color>
+  <color name="__bottomNavUnselected">@color/bpkSkyGrayTint04</color>
+
+  <color name="__barChartInactivatedColor">@color/bpkSkyGrayTint03</color>
+  <color name="__barChartActivatedColor">@color/bpkMonteverde</color>
+  <color name="__barChartPopupBackgroundColor">@color/bpkSkyBlueShade02</color>
+  <color name="__barChartPopupTextColor">@color/bpkWhite</color>
+  <color name="__chipSolidBackground">@color/bpkSkyGrayTint07</color>
+  <color name="__chipDisabled">@color/bpkSkyGrayTint04</color>
+</resources>

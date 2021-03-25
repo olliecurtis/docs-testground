@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Android BpkFlatListItemSeparator dark mode should render correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "rgb(72, 72, 74)",
+      "flex": 1,
+      "height": 1,
+      "marginHorizontal": 8,
+    }
+  }
+/>
+`;
+
+exports[`Android BpkFlatListItemSeparator light mode should render correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "rgb(205, 205, 215)",
+      "flex": 1,
+      "height": 1,
+      "marginHorizontal": 8,
+    }
+  }
+/>
+`;

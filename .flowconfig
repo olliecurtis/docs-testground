@@ -1,0 +1,30 @@
+[ignore]
+.*/.*test.flow.js
+.*/backpack-react-native/.*
+.*/backpack-android/.*
+.*/backpack-ios/.*
+.*/node_modules/jsonlint/.*
+.*/node_modules/jsonlint-mod/.*
+.*/node_modules/config-chain/test/broken.json
+
+[include]
+
+[libs]
+
+[lints]
+
+[options]
+module.name_mapper.extension='scss' -> '<PROJECT_ROOT>/scripts/stubs/styleStub.js'
+module.name_mapper.extension='md' -> '<PROJECT_ROOT>/scripts/stubs/fileStub.js'
+module.name_mapper.extension='mdx' -> '<PROJECT_ROOT>/scripts/stubs/fileStub.js'
+module.name_mapper.extension='png' -> '<PROJECT_ROOT>/scripts/stubs/fileStub.js'
+module.system.node.resolve_dirname=node_modules
+module.system.node.resolve_dirname=src
+emoji=true
+
+module.file_ext=.js
+module.file_ext=.json
+
+types_first=false
+
+[strict]

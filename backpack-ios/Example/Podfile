@@ -1,0 +1,40 @@
+source 'https://cdn.cocoapods.org/'
+
+platform :ios, '12.0'
+use_frameworks!
+ensure_bundler! '> 2.0'
+
+install! 'cocoapods', disable_input_output_paths: true
+
+target 'Backpack-Native' do
+  pod 'Backpack', :path => '../'
+  pod 'SwiftLint', '~> 0.39.2'
+  pod 'AppCenter', '~> 3.1.0'
+  pod 'AppCenter/Distribute', '~> 3.1.0'
+
+  target 'Backpack_Tests' do
+    inherit! :search_paths
+    pod 'OCMock', '~> 3.6.0'
+  end
+
+  target 'Backpack_SnapshotTests' do
+      inherit! :search_paths
+      pod 'iOSSnapshotTestCase/Core', '~> 6.2.0'
+  end
+end
+
+post_install do |installer|
+  installer.pods_project.build_configurations.each do |config|
+    config.build_settings.delete('CODE_SIGNING_ALLOWED')
+    config.build_settings.delete('CODE_SIGNING_REQUIRED')
+  end
+
+  puts 'Removing static analyzer support'
+  installer.pods_project.targets.each do |target|
+      if target.name == "FSCalendar"
+          target.build_configurations.each do |config|
+              config.build_settings['OTHER_CFLAGS'] = "$(inherited) -Qunused-arguments -Xanalyzer -analyzer-disable-all-checks"
+          end
+      end
+  end
+end

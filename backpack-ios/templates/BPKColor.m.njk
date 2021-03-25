@@ -1,0 +1,102 @@
+// clang-format off
+/*
+ * Backpack - Skyscanner's Design System
+ *
+ * Copyright 2018-2021 Skyscanner Ltd
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+#import "BPKColor.h"
+
+#import <Backpack/DarkMode.h>
+
+@interface BPKColor()
+@property(nonatomic, strong, readonly) NSCache<NSString *, UIColor *> *dynamicColorsCache;
+@end
+
+@implementation BPKColor
+{% for c in valueColor %}
++ (UIColor *){{c.name}} {
+    return [UIColor colorWithRed:{{c.value.r}} green:{{c.value.g}} blue:{{c.value.b}} alpha:{{c.value.a}}];
+}
+{% endfor %}
+{% for c in referenceColor %}
++ (UIColor *){{c.name}} {
+    return self.class.{{c.reference}};
+}
+{% endfor %}
+{% for c in dynamicColor %}
++ (UIColor *){{c.name}} {
+    return [[self class] dynamicColorWithLightVariant:self.class.{{c.value}} darkVariant:self.class.{{c.darkValue}}];
+}
+{% endfor %}
++ (UIColor *)clear {
+    return UIColor.clearColor;
+}
+
++ (UIColor *)blend:(UIColor*)firstColor with:(UIColor*)secondColor weight:(double)weight {
+    double secondColorWeight = 1.0f - weight;
+
+    CIColor *c1 = [[CIColor alloc] initWithColor:firstColor];
+    CIColor *c2 = [[CIColor alloc] initWithColor:secondColor];
+
+    double red = c1.red * weight + c2.red * secondColorWeight;
+    double green = c1.green * weight + c2.green * secondColorWeight;
+    double blue = c1.blue * weight + c2.blue * secondColorWeight;
+    double alpha = c1.alpha * weight + c2.alpha * secondColorWeight;
+
+    return [[UIColor alloc]initWithRed:red green:green blue:blue alpha:alpha];
+}
+
++ (NSString *)cacheKeyForColor:(UIColor *)color {
+    const CGFloat *colors = CGColorGetComponents( color.CGColor );
+    return [NSString stringWithFormat:@"%.05f,%.05f,%.05f", colors[0], colors[1], colors[2]];
+}
+
++ (NSCache<NSString *, UIColor *> *)dynamicColorsCache {
+    static dispatch_once_t onceToken;
+    static NSCache *_dynamicColorsCache = nil;
+    dispatch_once(&onceToken, ^{
+        _dynamicColorsCache = [[NSCache alloc] init];
+    });
+
+    return _dynamicColorsCache;
+}
+
++ (UIColor *)dynamicColorWithLightVariant:(UIColor *)lightVariant darkVariant:(UIColor *)darkVariant {
+#if __BPK_DARK_MODE_SUPPORTED
+    if (@available(iOS 13.0, *)) {
+        NSString *cacheKey = [NSString stringWithFormat:@"%@_%@", [self cacheKeyForColor:lightVariant], [self cacheKeyForColor:darkVariant]];
+        UIColor *potentialCacheHit = [[self dynamicColorsCache] objectForKey:cacheKey];
+
+        if (potentialCacheHit) {
+            return potentialCacheHit;
+        }
+
+        UIColor *newDynamicColor = [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {
+                if (traitCollection.userInterfaceStyle == UIUserInterfaceStyleDark) {
+                    return darkVariant;
+                } else {
+                    return lightVariant;
+                }
+        }];
+
+        [[self dynamicColorsCache] setObject:newDynamicColor forKey:cacheKey];
+        return newDynamicColor;
+    }
+#endif
+  return lightVariant;
+}
+
+@end
+// clang-format

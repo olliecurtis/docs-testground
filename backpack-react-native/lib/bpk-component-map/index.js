@@ -1,0 +1,56 @@
+/*
+ * Backpack - Skyscanner's Design System
+ *
+ * Copyright 2016-2021 Skyscanner Ltd
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/* @flow */
+
+import MapView, { Marker, Overlay } from 'react-native-maps';
+
+import BpkPriceMarker, {
+  PRICE_MARKER_STATUSES,
+  type Props,
+} from './src/BpkPriceMarker';
+import BpkIconMarker from './src/BpkIconMarker';
+import { ICON_MARKER_STATUSES } from './src/icon-marker-common-types';
+
+export default MapView;
+export {
+  Animated,
+  MAP_TYPES,
+  ProviderPropType,
+  Marker,
+  Overlay,
+  Polyline,
+  Polygon,
+  Circle,
+  UrlTile,
+  LocalTile,
+  Callout,
+  AnimatedRegion,
+} from 'react-native-maps';
+
+export const { PROVIDER_GOOGLE, PROVIDER_DEFAULT } = MapView;
+export const MarkerAnimated = Marker.Animated;
+export const OverlayAnimated = Overlay.Animated;
+
+export {
+  BpkPriceMarker,
+  BpkIconMarker,
+  PRICE_MARKER_STATUSES,
+  ICON_MARKER_STATUSES,
+};
+export type BpkPriceMarkerProps = Props;

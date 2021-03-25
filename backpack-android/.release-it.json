@@ -1,0 +1,13 @@
+{
+  "requireCleanWorkingDir": false,
+  "prompt": {
+    "src": {
+      "release": true
+    }
+  },
+  "dry-run": false,
+  "npm": {
+    "publish": false
+  },
+  "buildCommand": "npm run build"
+}

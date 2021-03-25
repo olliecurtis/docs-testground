@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Buttons View Controller-->
+        <scene sceneID="jUm-gh-8Ta">
+            <objects>
+                <viewController storyboardIdentifier="ButtonsViewController" id="yaK-Q8-sWi" customClass="BPKButtonsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S87-he-ZeP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FEW-9A-aRv" userLabel="Content View">
+                                <rect key="frame" x="0.0" y="145.5" width="375" height="376"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fqb-N5-Kfh" userLabel="Default Container">
+                                        <rect key="frame" x="8" y="8" width="367" height="154.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Default" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPG-ZD-nKO" customClass="BPKLabel">
+                                                <rect key="frame" x="0.0" y="0.0" width="55" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="fontStyle">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XrI-jy-Zgv">
+                                                <rect key="frame" x="0.0" y="28.5" width="174" height="118"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vnV-BF-945">
+                                                        <rect key="frame" x="0.0" y="0.0" width="174" height="34"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tgD-Q3-JaF" customClass="BPKButton">
+                                                                <rect key="frame" x="0.0" y="0.0" width="64" height="34"/>
+                                                                <state key="normal" title="Loading"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WQd-cV-VBa" customClass="BPKButton">
+                                                                <rect key="frame" x="72" y="0.0" width="64" height="34"/>
+                                                                <state key="normal" title="Loading"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zyW-aE-VqH" customClass="BPKButton">
+                                                                <rect key="frame" x="144" y="0.0" width="30" height="34"/>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="d5l-75-Ljk">
+                                                        <rect key="frame" x="0.0" y="42" width="136" height="34"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWH-oz-ScW" customClass="BPKButton">
+                                                                <rect key="frame" x="0.0" y="0.0" width="30" height="34"/>
+                                                                <state key="normal" title="Go"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oeP-th-apx" customClass="BPKButton">
+                                                                <rect key="frame" x="38" y="2" width="60" height="30"/>
+                                                                <state key="normal" title="Disabled"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzc-e4-W0P" customClass="BPKButton">
+                                                                <rect key="frame" x="106" y="0.0" width="30" height="34"/>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="are-Uc-Slw">
+                                                        <rect key="frame" x="0.0" y="84" width="68" height="34"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAK-NX-IQ0" customClass="BPKButton">
+                                                                <rect key="frame" x="0.0" y="0.0" width="30" height="34"/>
+                                                                <state key="normal" title="Go"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="imagePosition">
+                                                                        <integer key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WqP-4p-b67" customClass="BPKButton">
+                                                                <rect key="frame" x="38" y="0.0" width="30" height="34"/>
+                                                                <state key="normal" title="Go"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="imagePosition">
+                                                                        <integer key="value" value="0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="XrI-jy-Zgv" firstAttribute="leading" secondItem="lPG-ZD-nKO" secondAttribute="leading" id="06T-pG-tG6"/>
+                                            <constraint firstAttribute="bottom" secondItem="XrI-jy-Zgv" secondAttribute="bottom" constant="8" id="32o-nv-aib"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lPG-ZD-nKO" secondAttribute="trailing" constant="8" id="7i2-43-WXd"/>
+                                            <constraint firstItem="lPG-ZD-nKO" firstAttribute="top" secondItem="fqb-N5-Kfh" secondAttribute="top" id="QMF-5u-tUp"/>
+                                            <constraint firstItem="lPG-ZD-nKO" firstAttribute="leading" secondItem="fqb-N5-Kfh" secondAttribute="leading" id="ZzV-eD-RsX"/>
+                                            <constraint firstItem="XrI-jy-Zgv" firstAttribute="top" secondItem="lPG-ZD-nKO" secondAttribute="bottom" constant="8" id="ijX-aZ-jVi"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XrI-jy-Zgv" secondAttribute="trailing" constant="8" id="kPB-AW-Xrq"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fez-oG-XpD" userLabel="Large Container">
+                                        <rect key="frame" x="8" y="182.5" width="359" height="193.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Large" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6e-sa-mbj" customClass="BPKLabel">
+                                                <rect key="frame" x="0.0" y="0.0" width="43.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="fontStyle">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KBU-NC-j3g">
+                                                <rect key="frame" x="0.0" y="28.5" width="174" height="157"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Tgv-kR-UpP">
+                                                        <rect key="frame" x="0.0" y="0.0" width="174" height="34"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ler-Lw-jdv" customClass="BPKButton">
+                                                                <rect key="frame" x="0.0" y="0.0" width="64" height="34"/>
+                                                                <state key="normal" title="Loading"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="size">
+                                                                        <integer key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcH-p4-JoQ" customClass="BPKButton">
+                                                                <rect key="frame" x="72" y="0.0" width="64" height="34"/>
+                                                                <state key="normal" title="Loading"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="size">
+                                                                        <integer key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fh8-UZ-7G5" customClass="BPKButton">
+                                                                <rect key="frame" x="144" y="2" width="30" height="30"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="size">
+                                                                        <integer key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="EpX-FB-1Xi">
+                                                        <rect key="frame" x="0.0" y="42" width="146" height="34"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhi-lX-0z6" customClass="BPKButton">
+                                                                <rect key="frame" x="0.0" y="0.0" width="30" height="34"/>
+                                                                <state key="normal" title="Go"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="size">
+                                                                        <integer key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfX-pm-To4" customClass="BPKButton">
+                                                                <rect key="frame" x="38" y="0.0" width="70" height="34"/>
+                                                                <state key="normal" title="Disabled"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="size">
+                                                                        <integer key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sGM-4s-9a0" customClass="BPKButton">
+                                                                <rect key="frame" x="116" y="0.0" width="30" height="34"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="size">
+                                                                        <integer key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ej6-mJ-uGF">
+                                                        <rect key="frame" x="0.0" y="84" width="68" height="34"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htS-s3-5bd" customClass="BPKButton">
+                                                                <rect key="frame" x="0.0" y="0.0" width="30" height="34"/>
+                                                                <state key="normal" title="Go"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="size">
+                                                                        <integer key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="imagePosition">
+                                                                        <integer key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJf-SN-OB4" customClass="BPKButton">
+                                                                <rect key="frame" x="38" y="0.0" width="30" height="34"/>
+                                                                <state key="normal" title="Go"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="size">
+                                                                        <integer key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="imagePosition">
+                                                                        <integer key="value" value="0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CDs-kR-bb6">
+                                                        <rect key="frame" x="0.0" y="126" width="173.5" height="31"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Switch Loading" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L9p-pp-ulS" customClass="BPKLabel">
+                                                                <rect key="frame" x="0.0" y="0.0" width="116.5" height="31"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1sV-cf-vRL" customClass="BPKSwitch">
+                                                                <rect key="frame" x="124.5" y="0.0" width="51" height="31"/>
+                                                                <connections>
+                                                                    <action selector="switchLoadingState:" destination="yaK-Q8-sWi" eventType="valueChanged" id="d9l-DM-Qan"/>
+                                                                </connections>
+                                                            </switch>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="s6e-sa-mbj" firstAttribute="leading" secondItem="fez-oG-XpD" secondAttribute="leading" id="1cq-ql-J5U"/>
+                                            <constraint firstAttribute="bottom" secondItem="KBU-NC-j3g" secondAttribute="bottom" constant="8" id="2pK-Qq-hHI"/>
+                                            <constraint firstItem="KBU-NC-j3g" firstAttribute="leading" secondItem="s6e-sa-mbj" secondAttribute="leading" id="6ci-3F-Nl5"/>
+                                            <constraint firstItem="KBU-NC-j3g" firstAttribute="top" secondItem="s6e-sa-mbj" secondAttribute="bottom" constant="8" id="8Sm-Zg-571"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KBU-NC-j3g" secondAttribute="trailing" constant="8" id="HPf-6Y-WDs"/>
+                                            <constraint firstItem="s6e-sa-mbj" firstAttribute="top" secondItem="fez-oG-XpD" secondAttribute="top" id="eW7-rz-aio"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="s6e-sa-mbj" secondAttribute="trailing" constant="8" id="iad-po-dNP"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailingMargin" secondItem="fez-oG-XpD" secondAttribute="trailing" id="570-kq-MPi"/>
+                                    <constraint firstItem="fqb-N5-Kfh" firstAttribute="top" secondItem="FEW-9A-aRv" secondAttribute="topMargin" id="C3B-aR-RSk"/>
+                                    <constraint firstAttribute="bottom" secondItem="fez-oG-XpD" secondAttribute="bottom" id="SaY-Wq-QOD"/>
+                                    <constraint firstItem="fqb-N5-Kfh" firstAttribute="leading" secondItem="FEW-9A-aRv" secondAttribute="leadingMargin" id="jc2-Dm-Uwf"/>
+                                    <constraint firstItem="fez-oG-XpD" firstAttribute="leading" secondItem="FEW-9A-aRv" secondAttribute="leadingMargin" id="rhW-f7-gtX"/>
+                                    <constraint firstAttribute="trailing" secondItem="fqb-N5-Kfh" secondAttribute="trailing" id="v4y-gk-wNB"/>
+                                    <constraint firstItem="fez-oG-XpD" firstAttribute="top" secondItem="fqb-N5-Kfh" secondAttribute="bottom" constant="20" id="xYI-XQ-2nv"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Kxe-Pd-Ob5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FEW-9A-aRv" firstAttribute="centerY" secondItem="Kxe-Pd-Ob5" secondAttribute="centerY" id="Fi3-w8-XTO"/>
+                            <constraint firstItem="FEW-9A-aRv" firstAttribute="leading" secondItem="Kxe-Pd-Ob5" secondAttribute="leading" id="aJX-e7-ig2"/>
+                            <constraint firstItem="Kxe-Pd-Ob5" firstAttribute="trailing" secondItem="FEW-9A-aRv" secondAttribute="trailing" id="hmP-ma-vSr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="defaultDisabledButton" destination="oeP-th-apx" id="wrz-cO-5kU"/>
+                        <outlet property="defaultIconOnlyButton" destination="zzc-e4-W0P" id="swq-6z-cfu"/>
+                        <outlet property="defaultLeadingIconButton" destination="WqP-4p-b67" id="Faa-Z9-YEv"/>
+                        <outlet property="defaultLoadingButton" destination="WQd-cV-VBa" id="GNa-10-aWc"/>
+                        <outlet property="defaultLoadingIconOnlyButton" destination="zyW-aE-VqH" id="Mua-Yl-FqG"/>
+                        <outlet property="defaultLoadingTitleOnlyButton" destination="tgD-Q3-JaF" id="Khr-mG-JHv"/>
+                        <outlet property="defaultTextButton" destination="zWH-oz-ScW" id="ar0-pF-Iw3"/>
+                        <outlet property="defaultTrailingIconButton" destination="wAK-NX-IQ0" id="BYL-Gi-uyN"/>
+                        <outlet property="largeDisabledButton" destination="zfX-pm-To4" id="mbC-AD-64n"/>
+                        <outlet property="largeIconOnlyButton" destination="sGM-4s-9a0" id="0nr-cZ-0rG"/>
+                        <outlet property="largeLeadingIconButton" destination="GJf-SN-OB4" id="z8F-1r-68A"/>
+                        <outlet property="largeLoadingButton" destination="gcH-p4-JoQ" id="qkK-nn-iEA"/>
+                        <outlet property="largeLoadingIconOnlyButton" destination="Fh8-UZ-7G5" id="uLh-EF-F7E"/>
+                        <outlet property="largeLoadingTitleOnlyButton" destination="ler-Lw-jdv" id="CYS-X1-rzl"/>
+                        <outlet property="largeTextButton" destination="yhi-lX-0z6" id="atc-NE-kM7"/>
+                        <outlet property="largeTrailingIconButton" destination="htS-s3-5bd" id="Zcz-Yv-bOr"/>
+                        <outletCollection property="storyHeadings" destination="lPG-ZD-nKO" id="rJ8-dX-KI7"/>
+                        <outletCollection property="storyHeadings" destination="s6e-sa-mbj" id="G77-6J-i9N"/>
+                        <outletCollection property="storyHeadings" destination="L9p-pp-ulS" id="vjH-HI-lLC"/>
+                        <outletCollection property="contentViews" destination="S87-he-ZeP" id="TOO-Y7-Vi5"/>
+                        <outletCollection property="contentViews" destination="FEW-9A-aRv" id="gwT-Jc-zPi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RZY-Xj-Kae" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2321" y="2419"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="1sV-cf-vRL">
+            <size key="intrinsicContentSize" width="49" height="31"/>
+        </designable>
+        <designable name="Fh8-UZ-7G5">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="GJf-SN-OB4">
+            <size key="intrinsicContentSize" width="30" height="34"/>
+        </designable>
+        <designable name="L9p-pp-ulS">
+            <size key="intrinsicContentSize" width="116.5" height="20.5"/>
+        </designable>
+        <designable name="WQd-cV-VBa">
+            <size key="intrinsicContentSize" width="64" height="34"/>
+        </designable>
+        <designable name="WqP-4p-b67">
+            <size key="intrinsicContentSize" width="30" height="34"/>
+        </designable>
+        <designable name="gcH-p4-JoQ">
+            <size key="intrinsicContentSize" width="64" height="34"/>
+        </designable>
+        <designable name="htS-s3-5bd">
+            <size key="intrinsicContentSize" width="30" height="34"/>
+        </designable>
+        <designable name="lPG-ZD-nKO">
+            <size key="intrinsicContentSize" width="55" height="20.5"/>
+        </designable>
+        <designable name="ler-Lw-jdv">
+            <size key="intrinsicContentSize" width="64" height="34"/>
+        </designable>
+        <designable name="oeP-th-apx">
+            <size key="intrinsicContentSize" width="60" height="30"/>
+        </designable>
+        <designable name="s6e-sa-mbj">
+            <size key="intrinsicContentSize" width="43.5" height="20.5"/>
+        </designable>
+        <designable name="sGM-4s-9a0">
+            <size key="intrinsicContentSize" width="30" height="34"/>
+        </designable>
+        <designable name="tgD-Q3-JaF">
+            <size key="intrinsicContentSize" width="64" height="34"/>
+        </designable>
+        <designable name="wAK-NX-IQ0">
+            <size key="intrinsicContentSize" width="30" height="34"/>
+        </designable>
+        <designable name="yhi-lX-0z6">
+            <size key="intrinsicContentSize" width="30" height="34"/>
+        </designable>
+        <designable name="zWH-oz-ScW">
+            <size key="intrinsicContentSize" width="30" height="34"/>
+        </designable>
+        <designable name="zfX-pm-To4">
+            <size key="intrinsicContentSize" width="70" height="34"/>
+        </designable>
+        <designable name="zyW-aE-VqH">
+            <size key="intrinsicContentSize" width="30" height="34"/>
+        </designable>
+        <designable name="zzc-e4-W0P">
+            <size key="intrinsicContentSize" width="30" height="34"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

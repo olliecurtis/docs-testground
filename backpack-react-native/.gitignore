@@ -1,0 +1,75 @@
+.DS_Store
+.vscode
+lerna-debug.log
+android/captures
+ios/Pods
+
+build/
+
+# Xcode
+#
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+*.xcuserstate
+project.xcworkspace
+
+# Android/IntelliJ
+#
+.idea
+.gradle
+local.properties
+
+# We want to ignore *most* iml files but we do want to check in
+# android/react-native-maps/lib/lib.iml, so we manually ignore
+# all other iml files.
+android/native.iml
+android/app/app.iml
+lib/android/backpack-react-native.iml
+
+/.idea/caches/build_file_checksums.ser
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+gradlew.bat
+
+# node.js
+#
+node_modules/
+npm-debug.log
+yarn-error.log
+yarn.lock
+
+# BUCK
+buck-out/
+\.buckd/
+*.keystore
+
+#Jest
+coverage
+
+# Native bridges script
+.native-release-info.json
+
+.env
+android/app/src/main/assets/fonts/skyscanner_relative*
+
+dist
+
+# Bundler bundle
+ios/.bundle

@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Android BpkSectionListHeader dark mode should render correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "borderTopColor": "rgb(72, 72, 74)",
+      "borderTopWidth": 1,
+      "flexDirection": "row",
+      "height": 48,
+      "justifyContent": "flex-start",
+      "paddingHorizontal": 16,
+    }
+  }
+>
+  <Text
+    allowFontScaling={false}
+    style={
+      Array [
+        Object {
+          "color": "rgb(255, 255, 255)",
+          "fontFamily": "sans-serif",
+          "fontSize": 14,
+          "fontWeight": "400",
+          "letterSpacing": 0,
+          "textAlign": "left",
+        },
+        Object {
+          "fontFamily": "sans-serif-medium",
+        },
+        Object {
+          "color": "rgb(142, 142, 147)",
+        },
+      ]
+    }
+  >
+    Section header
+  </Text>
+</View>
+`;
+
+exports[`Android BpkSectionListHeader light mode should render correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "borderTopColor": "rgb(221, 221, 229)",
+      "borderTopWidth": 1,
+      "flexDirection": "row",
+      "height": 48,
+      "justifyContent": "flex-start",
+      "paddingHorizontal": 16,
+    }
+  }
+>
+  <Text
+    allowFontScaling={false}
+    style={
+      Array [
+        Object {
+          "color": "rgb(17, 18, 54)",
+          "fontFamily": "sans-serif",
+          "fontSize": 14,
+          "fontWeight": "400",
+          "letterSpacing": 0,
+          "textAlign": "left",
+        },
+        Object {
+          "fontFamily": "sans-serif-medium",
+        },
+        Object {
+          "color": "rgb(104, 105, 127)",
+        },
+      ]
+    }
+  >
+    Section header
+  </Text>
+</View>
+`;

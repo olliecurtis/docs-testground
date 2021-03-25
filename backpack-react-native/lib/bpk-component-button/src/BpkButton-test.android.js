@@ -1,0 +1,61 @@
+/*
+ * Backpack - Skyscanner's Design System
+ *
+ * Copyright 2016-2021 Skyscanner Ltd
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/* @flow */
+
+import React from 'react';
+import renderer from 'react-test-renderer';
+
+import BpkButton from './BpkButton';
+import commonTests from './BpkButton-test.common';
+
+const onPressFn = jest.fn();
+
+const mockPlatform = (platform, version) => {
+  const reactNative = jest.requireActual('react-native');
+  Object.defineProperty(reactNative.Platform, 'Version', {
+    value: version,
+  });
+
+  return reactNative;
+};
+
+describe('Android', () => {
+  commonTests();
+});
+
+describe('Android API levels', () => {
+  beforeEach(() => {
+    jest.resetModules();
+  });
+  it('Android API>=21 should render with ripple', () => {
+    mockPlatform('android', 21);
+    const tree = renderer
+      .create(<BpkButton title="Lorem ipsum" onPress={onPressFn} />)
+      .toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+  it('Android API<21 should render without ripple', () => {
+    mockPlatform('android', 19);
+    const tree = renderer.create(
+      <BpkButton title="Lorem ipsum" onPress={onPressFn} />,
+    );
+    const treeJson = tree.toJSON();
+    expect(treeJson).toMatchSnapshot();
+  });
+});

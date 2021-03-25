@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <style name="BpkDefaultTheme">
+    <item name="bpkPrimaryColor">@color/bpkPrimary</item>
+  </style>
+
+  <style name="BackpackFontBase" parent="">
+    <item name="bpkTextBaseAppearance">@style/bpkTextBaseSerif</item>
+    <item name="bpkTextCapsAppearance">@style/bpkTextCapsSerif</item>
+    <item name="bpkTextLgAppearance">@style/bpkTextLgSerif</item>
+    <item name="bpkTextSmAppearance">@style/bpkTextSmSerif</item>
+    <item name="bpkTextXlAppearance">@style/bpkTextXlSerif</item>
+    <item name="bpkTextXsAppearance">@style/bpkTextXsSerif</item>
+    <item name="bpkTextXxlAppearance">@style/bpkTextXxlSerif</item>
+    <item name="bpkTextXxxlAppearance">@style/bpkTextXxxlSerif</item>
+    <item name="bpkTextBaseEmphasizedAppearance">@style/bpkTextBaseEmphasizedSerif</item>
+    <item name="bpkTextCapsEmphasizedAppearance">@style/bpkTextCapsEmphasizedSerif</item>
+    <item name="bpkTextLgEmphasizedAppearance">@style/bpkTextLgEmphasizedSerif</item>
+    <item name="bpkTextSmEmphasizedAppearance">@style/bpkTextSmEmphasizedSerif</item>
+    <item name="bpkTextXlEmphasizedAppearance">@style/bpkTextXlEmphasizedSerif</item>
+    <item name="bpkTextXsEmphasizedAppearance">@style/bpkTextXsEmphasizedSerif</item>
+    <item name="bpkTextXxlEmphasizedAppearance">@style/bpkTextXxlEmphasizedSerif</item>
+    <item name="bpkTextXxxlEmphasizedAppearance">@style/bpkTextXxxlEmphasizedSerif</item>
+    <item name="bpkTextXlHeavyAppearance">@style/bpkTextXlHeavySerif</item>
+    <item name="bpkTextXxlHeavyAppearance">@style/bpkTextXxlHeavySerif</item>
+    <item name="bpkTextXxxlHeavyAppearance">@style/bpkTextXxxlHeavySerif</item>
+  </style>
+
+  <style name="Bpk.badge" parent="android:Widget" />
+
+  <style name="Bpk.button" parent="android:Widget" />
+
+  <style name="Bpk.panel" parent="android:Widget">
+    <item name="android:padding">@dimen/bpkSpacingSm</item>
+    <item name="background">@drawable/border</item>
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+  </style>
+
+  <style name="Bpk.card" parent="android:Widget">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+  </style>
+
+  <style name="Bpk.dialog.animation" parent="">
+    <item name="android:windowEnterAnimation">@anim/dialog_slide_up</item>
+    <item name="android:windowExitAnimation">@anim/dialog_slide_out_down</item>
+  </style>
+
+  <style name="Bpk.Calendar.Day" parent="android:Widget">
+    <item name="android:gravity">center</item>
+    <item name="android:layout_weight">1</item>
+    <item name="android:lines">1</item>
+    <item name="android:ellipsize">end</item>
+    <item name="android:textColor">@color/bpkTextQuaternary</item>
+    <item name="textStyle">sm</item>
+  </style>
+</resources>

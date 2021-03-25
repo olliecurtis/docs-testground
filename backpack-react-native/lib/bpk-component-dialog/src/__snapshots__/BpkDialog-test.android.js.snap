@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Android BpkDialog should render correctly 1`] = `
+<AndroidBPKDialogView
+  actions={Array []}
+  description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  dialogType="alert"
+  icon={
+    Object {
+      "iconColor": "bpkMonteverde",
+      "iconId": "bpk_tick",
+    }
+  }
+  isOpen={false}
+  onChange={[Function]}
+  scrimEnabled={true}
+  title="BackpackDialog"
+  type="alert"
+/>
+`;
+
+exports[`Android BpkDialog should render correctly open 1`] = `
+<AndroidBPKDialogView
+  actions={Array []}
+  description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  dialogType="alert"
+  icon={
+    Object {
+      "iconColor": "bpkMonteverde",
+      "iconId": "bpk_tick",
+    }
+  }
+  isOpen={true}
+  onChange={[Function]}
+  scrimEnabled={true}
+  title="BackpackDialog"
+/>
+`;
+
+exports[`Android BpkDialog should render correctly with bottom sheet style 1`] = `
+<AndroidBPKDialogView
+  actions={Array []}
+  description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  dialogType="alert"
+  icon={
+    Object {
+      "iconColor": "bpkMonteverde",
+      "iconId": "bpk_tick",
+    }
+  }
+  isOpen={true}
+  onChange={[Function]}
+  scrimEnabled={true}
+  title="BackpackDialog"
+  type="bottomSheet"
+/>
+`;
+
+exports[`Android BpkDialog should render correctly with disabled scrim actions 1`] = `
+<AndroidBPKDialogView
+  actions={Array []}
+  description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  dialogType="alert"
+  icon={
+    Object {
+      "iconColor": "bpkMonteverde",
+      "iconId": "bpk_tick",
+    }
+  }
+  isOpen={true}
+  onChange={[Function]}
+  scrimEnabled={false}
+  title="BackpackDialog"
+  type="alert"
+/>
+`;
+
+exports[`Android BpkDialog should render correctly with one actions 1`] = `
+<AndroidBPKDialogView
+  actions={
+    Array [
+      Object {
+        "callback": [Function],
+        "text": "Yes",
+        "type": "primary",
+      },
+    ]
+  }
+  description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  dialogType="alert"
+  icon={
+    Object {
+      "iconColor": "bpkMonteverde",
+      "iconId": "bpk_tick",
+    }
+  }
+  isOpen={true}
+  onChange={[Function]}
+  scrimEnabled={true}
+  title="BackpackDialog"
+  type="alert"
+/>
+`;
+
+exports[`Android BpkDialog should render correctly with two actions 1`] = `
+<AndroidBPKDialogView
+  actions={
+    Array [
+      Object {
+        "callback": [Function],
+        "text": "Yes",
+        "type": "primary",
+      },
+      Object {
+        "callback": [Function],
+        "text": "No",
+        "type": "destructive",
+      },
+    ]
+  }
+  description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  dialogType="alert"
+  icon={
+    Object {
+      "iconColor": "bpkMonteverde",
+      "iconId": "bpk_tick",
+    }
+  }
+  isOpen={true}
+  onChange={[Function]}
+  scrimEnabled={true}
+  title="BackpackDialog"
+  type="alert"
+/>
+`;

@@ -1,0 +1,91 @@
+{
+  "private": true,
+  "name": "backpack-android",
+  "version": "28.0.1",
+  "engines": {
+    "node": "^12.13.0",
+    "npm": "^6.12.0"
+  },
+  "scripts": {
+    "preinstall": "npx ensure-node-env",
+    "emulator:build": "./gradlew build",
+    "emulator:test": "./gradlew Backpack:connectedOssDebugAndroidTest app:verifyOssDebugAndroidTestScreenshotTest -PlocalTests=true",
+    "emulator:boot": "$ANDROID_HOME/emulator/emulator -avd bpk-droid-avd -sdcard sd.img -no-snapshot &",
+    "emulator:kill": "adb emu kill",
+    "preemulator": "npm run emulator:boot",
+    "emulator": "adb wait-for-device && sleep 5 && npm run emulator:build && npm run emulator:test",
+    "postemulator": "npm run emulator:kill",
+    "prerelease": "npm ci && npm run emulator",
+    "release": "node release.js",
+    "postrelease": "node postrelease.js > /dev/null 2>&1 &",
+    "lint": "eslint . --ext .js,.jsx",
+    "prebuild": "npm run lint",
+    "build": "gulp && npm run spellcheck",
+    "danger": "danger ci",
+    "prettier": "prettier --config .prettierrc --write \"**/*.js\"",
+    "docs": "./gradlew Backpack:dokka",
+    "docs:clean": "./gradlew Backpack:cleanDokka",
+    "spellcheck": "mdspell -r --en-gb --ignore-acronyms --ignore-numbers --no-suggestions '*.md' '**/*.md' '!**/node_modules/**/*.md'",
+    "spellcheck:interactive": "mdspell --en-gb --ignore-acronyms --no-suggestions --ignore-numbers '*.md' '**/*.md' '!**/node_modules/**/*.md'"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "prepare-commit-msg": "jirabot precommit $HUSKY_GIT_PARAMS || true"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint"
+    ],
+    "*.kt": [
+      "./scripts/lint-staged-ktlint.sh"
+    ],
+    "*.md": [
+      "mdspell -r --en-gb --ignore-acronyms --ignore-numbers --no-suggestions"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Skyscanner/backpack-android.git"
+  },
+  "author": "Backpack Design System <backpack@skyscanner.net>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Skyscanner/backpack-android/issues"
+  },
+  "homepage": "https://github.com/Skyscanner/backpack-android#readme",
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "bpk-svgs": "^12.1.10",
+    "bpk-tokens": "^35.0.0",
+    "danger": "^9.4.0",
+    "del": "^4.0.0",
+    "ensure-node-env": "^1.2.2",
+    "eslint-config-skyscanner-with-prettier": "^0.8.0",
+    "eslint_d": "^7.1.1",
+    "gulp": "^4.0.2",
+    "gulp-data": "^1.3.1",
+    "gulp-nunjucks": "^4.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-util": "^3.0.8",
+    "husky": "^1.3.1",
+    "inquirer": "^6.0.0",
+    "js-yaml": "^3.13.1",
+    "lint-staged": "^8.1.3",
+    "lodash": "^4.17.13",
+    "markdown-spellcheck": "^1.3.1",
+    "merge-stream": "^2.0.0",
+    "merge2": "^1.2.1",
+    "node-fetch": "^2.0.0",
+    "release-it": "^12.2.0",
+    "replace-in-file": "^3.4.2",
+    "semver": "^5.5.0",
+    "svg2vectordrawable": "^2.4.0",
+    "through2": "^3.0.0",
+    "tinycolor2": "^1.4.1",
+    "xmldom": "^0.1.27"
+  },
+  "dependencies": {}
+}

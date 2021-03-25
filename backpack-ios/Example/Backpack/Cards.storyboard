@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cards-->
+        <scene sceneID="Key-dr-x8S">
+            <objects>
+                <viewController storyboardIdentifier="CardsViewController" title="Cards" id="UVm-Uc-6tJ" customClass="CardsViewController" customModule="Backpack_Native" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gKV-RN-Byx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vkJ-QX-XUu" customClass="BPKCard">
+                                <rect key="frame" x="167" y="313" width="40" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bZj-oM-QOj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vkJ-QX-XUu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bZj-oM-QOj" secondAttribute="leading" constant="16" id="I9n-Nd-ndS"/>
+                            <constraint firstItem="bZj-oM-QOj" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vkJ-QX-XUu" secondAttribute="trailing" constant="16" id="TtH-oR-iSz"/>
+                            <constraint firstItem="vkJ-QX-XUu" firstAttribute="centerX" secondItem="gKV-RN-Byx" secondAttribute="centerX" id="VVC-Kl-UhA"/>
+                            <constraint firstItem="vkJ-QX-XUu" firstAttribute="centerY" secondItem="gKV-RN-Byx" secondAttribute="centerY" id="yu9-mF-zmb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="card" destination="vkJ-QX-XUu" id="yXg-wN-9D2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mjb-xD-ezC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1841" y="2858"/>
+        </scene>
+        <!--Divided cards-->
+        <scene sceneID="648-43-VCz">
+            <objects>
+                <viewController storyboardIdentifier="DividedCardsViewController" title="Divided cards" id="msG-uW-dQe" customClass="DividedCardsViewController" customModule="Backpack_Native" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Oi-V5-nf8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jEZ-E3-2U1" customClass="BPKDividedCard">
+                                <rect key="frame" x="167" y="313" width="40" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cNN-VH-aJx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jEZ-E3-2U1" firstAttribute="centerX" secondItem="4Oi-V5-nf8" secondAttribute="centerX" id="9to-uf-uOe"/>
+                            <constraint firstItem="jEZ-E3-2U1" firstAttribute="centerY" secondItem="4Oi-V5-nf8" secondAttribute="centerY" id="eKk-g5-6Cm"/>
+                            <constraint firstItem="jEZ-E3-2U1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cNN-VH-aJx" secondAttribute="leading" constant="16" id="vbH-8n-Ajj"/>
+                            <constraint firstItem="cNN-VH-aJx" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jEZ-E3-2U1" secondAttribute="trailing" constant="16" id="zz7-KI-ZQu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="card" destination="jEZ-E3-2U1" id="3kN-6A-AEU"/>
+                        <outlet property="dividedCard" destination="jEZ-E3-2U1" id="o4r-ns-iKW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="chT-ve-rub" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2542" y="2859"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
